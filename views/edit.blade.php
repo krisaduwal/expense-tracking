@@ -11,6 +11,7 @@
 <div class="card-body text-success">
     <form action="{{route('updateExpense')}}" method="POST">
         @csrf
+        <input type="hidden" value="{{$item->id}}" name="id">
         <div class="mb-3">
         <label for="title" class="form-label">Title</label>
         <input type="text" name="title" class="form-control" id="title">
